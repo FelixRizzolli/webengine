@@ -74,7 +74,7 @@ class Application
     public function setResponse(Response $response): void {
         $this->response = $response;
     }
-    public function setSession(Session $session): void{
+    public function setSession(Session $session): void {
         $this->session = $session;
     }
     public function setView(View $view): void {
@@ -93,10 +93,10 @@ class Application
         $this->user = $user;
     }
 
-    private function setLayout(string $layout) {
+    private function setLayout(string $layout): void {
         $this->layout = $layout;
     }
-    private function setUserClass(string $userClass) {
+    private function setUserClass(string $userClass): void {
         $this->userClass = $userClass;
     }
 
@@ -170,7 +170,7 @@ class Application
             call_user_func($callback);
         }
     }
-    public function on($eventName, $callback): void{
+    public function on($eventName, $callback): void {
         $this->eventListeners[$eventName][] = $callback;
     }
 }

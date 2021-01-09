@@ -38,23 +38,23 @@ class InputField extends BaseField {
         return $this->type;
     }
 
-    public function passwordField(): InputField{
+    public function passwordField(): InputField {
         $this->setType(self::TYPE_PASSWORD);
         return $this;
     }
-    public function emailField(): InputField{
+    public function emailField(): InputField {
         $this->setType(self::TYPE_EMAIL);
         return $this;
     }
-    public function numberField(): InputField{
+    public function numberField(): InputField {
         $this->setType(self::TYPE_NUMBER);
         return $this;
     }
-    public function dateField(): InputField{
+    public function dateField(): InputField {
         $this->setType(self::TYPE_DATE);
         return $this;
     }
-    public function textField(): InputField{
+    public function textField(): InputField {
         $this->setType(self::TYPE_TEXT);
         return $this;
     }

@@ -37,7 +37,7 @@ abstract class DBModel extends Model {
         return true;
     }
 
-    public static function prepareQuery($sql): PDOStatement{
+    public static function prepareQuery($sql): PDOStatement {
         return Application::$app->getDatabase()->getPDO()->prepare($sql);
     }
 }

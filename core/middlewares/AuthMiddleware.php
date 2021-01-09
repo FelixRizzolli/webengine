@@ -24,20 +24,20 @@ class AuthMiddleware extends BaseMiddleware {
         $this->actions = $actions;
     }
 
-    public function setActions(array $actions) {
+    public function setActions(array $actions): void {
         $this->actions = $actions;
     }
     public function getActions(): array {
         return $this->actions;
     }
-    public function forbiddenAction(): bool {
+    public function isForbiddenAction(): bool {
         return empty($this->getActions()) || in_array(Application::$app->getController()->getAction(), $this->getActions());
     }
 
 
-    public function execute() {
+    public function execute(): void {
         if (Application::isGuest()) {
-            if ($this->forbiddenAction()) {
+            if ($this->isForbiddenAction()) {
                 throw new ForbiddenException();
             }
         }

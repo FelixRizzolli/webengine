@@ -20,7 +20,7 @@ use app\models\User;
  */
 class AuthController extends Controller {
 
-    public function __construct(){
+    public function __construct() {
         $this->registerMiddleware(new AuthMiddleware([
             'profile'
         ]));
@@ -68,12 +68,12 @@ class AuthController extends Controller {
         ]);
     }
 
-    public function logout(Request $request, Response $response) {
+    public function logout(Request $request, Response $response): void {
         Application::$app->logout();
         $response->redirect('/');
     }
 
-    public function profile(): string{
+    public function profile(): string {
         $params = [
             "title" => "My Profile"
         ];

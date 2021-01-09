@@ -33,6 +33,6 @@ class ContactForm extends Model {
     }
 
     public function send(): bool {
-
+        return true;
     }
 }

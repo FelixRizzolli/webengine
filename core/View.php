@@ -14,13 +14,13 @@ class View {
     private string $title = '';
     private array $breadcrumbs = array();
 
-    public function setTitle(string $title) {
+    public function setTitle(string $title): void {
         $this->title = $title;
     }
-    public function setBreadcrumbs(array $breadcrumbs){
+    public function setBreadcrumbs(array $breadcrumbs): void{
         $this->breadcrumbs = $breadcrumbs;
     }
-    public function addBreadcrumb(string $url, string $title) {
+    public function addBreadcrumb(string $url, string $title): void {
         $this->breadcrumbs[] = [
             "title" => $title,
             "url" => $url

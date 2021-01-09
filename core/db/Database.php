@@ -24,14 +24,14 @@ class Database {
         $this->getPDO()->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    private function setPDO(PDO $pdo) {
+    private function setPDO(PDO $pdo): void {
         $this->pdo = $pdo;
     }
     public function getPDO(): PDO {
         return $this->pdo;
     }
 
-    public function applyMigrations() {
+    public function applyMigrations(): void {
         $this->createMigrationsTable();
         $appliedMigrations = $this->getAppliedMigrations();
 
@@ -79,7 +79,7 @@ class Database {
 
         return $statement->fetchAll(PDO::FETCH_COLUMN);
     }
-    public function saveMigrations(array $migrations){
+    public function saveMigrations(array $migrations): void {
         $values = implode(",", array_map(fn($m) => "('$m')", $migrations));
 
         $sql = ("
@@ -92,11 +92,11 @@ class Database {
         $statement->execute();
     }
 
-    protected function log($message){
+    protected function log($message): void {
         echo('[' . date('Y-m-d H:i:s') . '] - ' . $message . PHP_EOL);
     }
 
-    public function prepareQuery($sql): PDOStatement{
+    public function prepareQuery($sql): PDOStatement {
         return $this->getPDO()->prepare($sql);
     }
 }

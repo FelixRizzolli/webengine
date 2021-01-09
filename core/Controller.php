@@ -19,10 +19,10 @@ class Controller
      */
     private array $middlewares = [];
 
-    protected function setLayout(string $layout) {
+    protected function setLayout(string $layout): void {
         $this->layout = $layout;
     }
-    public function setAction(string $action) {
+    public function setAction(string $action): void {
         $this->action = $action;
     }
 
@@ -40,7 +40,7 @@ class Controller
         return Application::$app->getView()->renderView($view, $params);
     }
 
-    public function registerMiddleware(BaseMiddleware $middleware) {
+    public function registerMiddleware(BaseMiddleware $middleware): void {
         $this->middlewares[] = $middleware;
     }
 }

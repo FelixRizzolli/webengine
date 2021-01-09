@@ -17,7 +17,7 @@ class Form {
         echo sprintf('<form action="%s" method="%s">', $action, $method);
         return new Form();
     }
-    public static function end() {
+    public static function end(): void {
         echo '</form>';
     }
 

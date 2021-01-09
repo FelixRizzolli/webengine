@@ -26,8 +26,7 @@ abstract class BaseField {
         $this->setModel($model);
         $this->setAttribute($attribute);
     }
-    public function __toString(): string
-    {
+    public function __toString(): string {
         return sprintf('
             <label for="%s" class="block text-sm font-medium text-gray-700">
                 %s
