@@ -1,0 +1,19 @@
+{
+    "name": "felixrizzolli/webengine",
+    "description": "PHP Framework",
+    "authors": [
+        {
+            "name": "Felix Rizzolli",
+            "email": "felix.rizzolli@outlook.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.2",
+      "ext-pdo": "*"
+    }
+}
