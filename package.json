@@ -1,0 +1,37 @@
+{
+  "name": "webengine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build:w": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelixRizzolli/webengine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelixRizzolli/webengine/issues"
+  },
+  "homepage": "https://github.com/FelixRizzolli/webengine#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.1",
+    "css-loader": "^5.0.1",
+    "mini-css-extract-plugin": "^1.3.3",
+    "postcss": "^8.2.4",
+    "postcss-loader": "^4.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.32.4",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "tailwindcss": "^2.0.2",
+    "ts-loader": "^8.0.14",
+    "webpack": "^5.13.0",
+    "webpack-cli": "^4.3.1"
+  }
+}

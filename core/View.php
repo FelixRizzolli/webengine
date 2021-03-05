@@ -47,7 +47,7 @@ class View {
             $layout = Application::$app->getController()->getLayout();
         }
         ob_start();
-        include_once(Application::$ROOT_DIR . "/views/layouts/{$layout}.php");
+        include_once(Application::$ROOT_DIR . "/views/layouts/{$layout}.view.php");
         return ob_get_clean();
     }
     private function renderOnlyView($view, $params = array()): string {
@@ -55,7 +55,7 @@ class View {
             $$key = $value;
         }
         ob_start();
-        include_once(Application::$ROOT_DIR . "/views/{$view}.php");
+        include_once(Application::$ROOT_DIR . "/views/{$view}.view.php");
         return ob_get_clean();
     }
 }

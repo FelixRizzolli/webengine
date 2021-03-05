@@ -1,5 +1,18 @@
-vendor
+# PHPStorm
 .idea
+
+# Composer
+vendor
+
+# Node Package Manager
+node_modules
+
+# Settings
 .env
 .env.dev
 .env.prod
+
+# Compressed Resources
+public/css
+public/js
+public/media
